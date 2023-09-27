@@ -3,11 +3,14 @@ import { kelvinToCelsius, kelvinToFahrenheit } from './modules/converter.js';
 
 let searchBtn = document.getElementById("search-icon");
 
+let searchBar = document.getElementById("search-bar");
+
 let apiID = 'ace526a3c569b00441f622e36ca31bde';
 
 // let cityName = document.querySelector('.city-name').innerHTML;
 
 searchBtn.addEventListener('click', fetchTemperature)
+searchBar.addEventListener('keypress', e => e.key === 'Enter' ? fetchTemperature() : null)
 
 function fetchTemperature() {
     let city = document.getElementById("search-bar").value;
