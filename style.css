@@ -6,7 +6,6 @@
     font-family: 'Inter', sans-serif;
 }
 body {
-    background-image: url('./images/dawid-zawila--G3rw6Y02D0-unsplash.jpg');
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size: cover;
@@ -36,6 +35,9 @@ body {
     opacity: .7;
     padding-left: 20px;
     font-size: 1.2rem;
+}
+.search-bar::placeholder {
+    color: #fff;
 }
 .search-btn {
     position: absolute;

@@ -1,5 +1,8 @@
 import setTempImage from './modules/images.js';
 import { kelvinToCelsius, kelvinToFahrenheit } from './modules/converter.js';
+import isDay from './modules/bgimg.js';
+
+console.log("day", isDay)
 
 let searchBtn = document.getElementById("search-icon");
 
