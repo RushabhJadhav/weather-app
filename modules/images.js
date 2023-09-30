@@ -1,9 +1,4 @@
-let date = new Date().getHours();
-
-let isDay = date >= 6 && date <= 18 ? true : false ;
-
 const setTempImage = (description) => {
-    console.log('day', isDay)
     let imageDesc = document.getElementById('temp-img');
     console.log(description)
     switch(description) {

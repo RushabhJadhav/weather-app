@@ -12,21 +12,36 @@
     <div id="root">
         <h1 class="app-header">Weather App</h1>
         <div class="search-wrapper">
-            <input type="text" class="search-bar" id="search-bar">
+            <input type="text" class="search-bar" id="search-bar" placeholder="Enter city name">
             <button class="search-btn"><i class="fa fa-search" id="search-icon"></i></button>
         </div>
-        <div class="weather-card">
-            <div class="img-wrapper">
-                <img id="temp-img" src="" alt="">
-            </div>
-            <div class="weather-info-wrapper">
-                <!-- <p class="city-name"></p> -->
-                <p class="weather-desc"></p>
-                <div class="temp-wrapper">
-                    <p class="temp" id="celsius"></p>
-                    <p class="temp" id="fahrenheit"></p>
+        <div class="weather-grid">
+            <div class="weather-card">
+                <div class="img-wrapper">
+                    <img id="temp-img" src="" alt="">
                 </div>
+                <div class="weather-info-wrapper">
+                    <!-- <p class="city-name"></p> -->
+                    <div class="temp-wrapper">
+                        <p class="temp" id="celsius"></p>
+                        <p class="temp" id="fahrenheit"></p>
+                    </div>
+                    <p class="weather-desc"></p>
+                    <hr>
+                    <div class="icon-wrap location">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <div class="location-name"></div>
+                    </div>
+                    <div class="icon-wrap date-wrapper">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <div class="date"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-card"> 
                 <p class="humidity"></p>
+            </div>
+            <div class="weather-card">
                 <p class="pressure"></p>
             </div>
         </div>
