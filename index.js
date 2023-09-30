@@ -1,5 +1,5 @@
 import setTempImage from './modules/images.js';
-import { kelvinToCelsius, kelvinToFahrenheit } from './modules/converter.js';
+import { kelvinToCelsius, kelvinToFahrenheit, milesToKilo, visibilityCon } from './modules/converter.js';
 import isDay from './modules/bgimg.js';
 
 console.log("day", isDay)
@@ -35,6 +35,8 @@ function fetchTemperature() {
             // console.log(data)
             kelvinToCelsius(data.main.temp)
             kelvinToFahrenheit(data.main.temp)
+            milesToKilo(data.wind.speed)
+            visibilityCon(data.visibility)
             setTempImage(data.weather[0].description)
             document.querySelector('.weather-grid').style.display = 'grid';
             document.querySelector('.weather-desc').innerHTML = data.weather[0].description;
