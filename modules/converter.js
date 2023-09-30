@@ -2,6 +2,10 @@ let tempCelsius = document.getElementById("celsius");
 
 let tempFahrenheit = document.getElementById("fahrenheit");
 
+let setSpeed = document.querySelector('.wind');
+
+let setVisibility = document.querySelector('.visibility');
+
 const kelvinToCelsius = (temp) => {
     let celsius;
     celsius = Math.round(temp - 273.15);
@@ -20,4 +24,18 @@ const kelvinToFahrenheit = (temp) => {
     console.log('Fahrenheit', fahrenheit)
 }
 
-export { kelvinToCelsius, kelvinToFahrenheit };
+const milesToKilo = (val) => {
+    let kiloM;
+    kiloM = Math.round(val * 3600 / 1000);
+
+    setSpeed.innerHTML = `Wind : ${kiloM} km/h`;
+}
+
+const visibilityCon = (val) => {
+    let visibility;
+    visibility = val / 1000;
+
+    setVisibility.innerHTML = `Visibility : ${visibility} km`;
+} 
+
+export { kelvinToCelsius, kelvinToFahrenheit, milesToKilo, visibilityCon };
