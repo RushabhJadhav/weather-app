@@ -36,7 +36,7 @@ function fetchTemperature() {
             kelvinToCelsius(data.main.temp)
             kelvinToFahrenheit(data.main.temp)
             setTempImage(data.weather[0].description)
-            document.querySelector('.weather-grid').style.display = 'flex';
+            document.querySelector('.weather-grid').style.display = 'grid';
             document.querySelector('.weather-desc').innerHTML = data.weather[0].description;
             document.querySelector('.location-name').innerHTML = data.name;
             document.querySelector('.humidity').innerHTML = `Humidity : ${data.main.humidity}%`; 
