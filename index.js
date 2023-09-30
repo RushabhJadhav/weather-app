@@ -10,6 +10,16 @@ let searchBar = document.getElementById("search-bar");
 
 let apiID = 'ace526a3c569b00441f622e36ca31bde';
 
+let d = new Date();
+
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+let month = months[d.getMonth()];
+
+let day = days[d.getDay()];
+
 // let cityName = document.querySelector('.city-name').innerHTML;
 
 searchBtn.addEventListener('click', fetchTemperature)
@@ -26,11 +36,12 @@ function fetchTemperature() {
             kelvinToCelsius(data.main.temp)
             kelvinToFahrenheit(data.main.temp)
             setTempImage(data.weather[0].description)
+            document.querySelector('.weather-grid').style.display = 'flex';
             document.querySelector('.weather-desc').innerHTML = data.weather[0].description;
-            document.querySelector('.weather-card').style.display = 'block';
-            // document.querySelector('.city-name').innerHTML = data.name;
-            document.querySelector('.humidity').innerHTML = `Humidity : ${data.main.humidity}%`;
+            document.querySelector('.location-name').innerHTML = data.name;
+            document.querySelector('.humidity').innerHTML = `Humidity : ${data.main.humidity}%`; 
             document.querySelector('.pressure').innerHTML = `Pressure : ${data.main.pressure}`;
+            document.querySelector('.date').innerHTML = `${d.getDate()} ${month}, ${day}`;
         })
     } else {
         alert('please enter something')
